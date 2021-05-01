@@ -39,7 +39,7 @@ const routes: Routes = [
   },
   {
     path: 'formulario',
-    component:FormularioComponent  
+    component: FormularioComponent  
   }
 
 ];

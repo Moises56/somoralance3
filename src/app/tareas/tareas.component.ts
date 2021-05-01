@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Tareas } from '../models/publicaciones';
 import { TareasService } from '../services/tareas.service'
 
 @Component({
@@ -8,18 +9,30 @@ import { TareasService } from '../services/tareas.service'
 })
 export class TareasComponent implements OnInit {
 
-  tareas = [];
+  // tareas = [];
 
-  constructor(private tareasService: TareasService) { }
+  constructor(public tareaService: TareasService) { }
 
   ngOnInit(): void {
-    this.tareasService.getTareas()
-    .subscribe(
-      res => {
-        console.log(res);
-        this.tareas = res
+    this.getTareas();
+    
+    // console.log(this.tareaService.getTareas())
+    // .subscribe(
+    //   res => {
+    //     console.log(res);
+    //     this.tareasService.tareas = res
+    //   },
+    //   err => console.log(err)
+    // )
+  }
+
+  getTareas(){
+    this.tareaService.getTareas().subscribe(
+      // res => console.log(res),
+     (res) => {
+        this.tareaService.tareas = res;
       },
-      err => console.log(err)
+      (err) => console.error(err)
     )
   }
 

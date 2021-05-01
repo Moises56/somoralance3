@@ -5,7 +5,7 @@ const path = require('path');
 //* const { dirname } = require('node:path');
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4200;
 var app_path = './dist/angular-app-heroku';
 require('./backend/server/database');
 

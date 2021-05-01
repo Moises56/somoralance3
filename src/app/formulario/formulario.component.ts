@@ -29,7 +29,7 @@ export class FormularioComponent implements OnInit {
         res => {
           console.log(this.formulario);
           localStorage.setItem('token', res.token);
-          this.router.navigate(['/privadas']);
+          this.router.navigate(['/tareas']);
         },
         err => console.log(err)
   

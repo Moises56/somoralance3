@@ -11,7 +11,7 @@ export class FormularioComponent implements OnInit {
 
   formulario = {
     nombre: '',
-    descripcion: ''  
+    descripcion: '',  
   }
 
   constructor(
@@ -23,10 +23,11 @@ export class FormularioComponent implements OnInit {
   }
 
   form(){
+    console.log(this.formulario);
     this.authService.formulario(this.formulario)
       .subscribe(
         res => {
-          console.log(res);
+          console.log(this.formulario);
           localStorage.setItem('token', res.token);
           this.router.navigate(['/privadas']);
         },

@@ -6,8 +6,8 @@
               </div>
               <div class="col-lg-8 align-self-baseline pt-5">
                 <ul class="list-group">
-                    <li class="list-group-item" *ngFor="let tarea of tareas">
-                        {{tarea._id}} - {{tarea.name}}: {{tarea.description}}
+                    <li class="list-group-item" *ngFor="let tarea of tareaService.tareas ">
+                        {{tarea._id}} - {{tarea.nombre}}: {{tarea.description}}
                     </li>
                 </ul>
             </div>     

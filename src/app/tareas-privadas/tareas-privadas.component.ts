@@ -15,13 +15,13 @@ export class TareasPrivadasComponent implements OnInit {
 
   ngOnInit(): void {
     this.tareasService.getTareas()
-    .subscribe(
-      res => {
-        console.log(res);
-        this.tareas = res
-      },
-      err => console.log(err)
-    )
+    // .subscribe(
+    //   res => {
+    //     console.log(res);
+    //     this.tareas = res
+    //   },
+    //   err => console.log(err)
+    // )
   }
 
 }

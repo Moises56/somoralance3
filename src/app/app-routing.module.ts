@@ -9,6 +9,7 @@ import {TareasComponent} from './tareas/tareas.component'
 import {TareasPrivadasComponent} from './tareas-privadas/tareas-privadas.component'
 import {SignupComponent} from './signup/signup.component'
 import {LoginComponent} from './login/login.component'
+import {FormularioComponent} from './formulario/formulario.component'
 
 import { AuthGuard } from './auth.guard'
 
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'formulario',
+    component:FormularioComponent  
   }
 
 ];

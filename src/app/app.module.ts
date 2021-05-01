@@ -13,6 +13,7 @@ import { TareasComponent } from './tareas/tareas.component';
 import { TareasPrivadasComponent } from './tareas-privadas/tareas-privadas.component';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './services/token-interceptor.service';
+import { FormularioComponent } from './formulario/formulario.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TokenInterceptorService } from './services/token-interceptor.service';
     LoginComponent,
     SignupComponent,
     TareasComponent,
-    TareasPrivadasComponent
+    TareasPrivadasComponent,
+    FormularioComponent
   ],
   imports: [
     BrowserModule,

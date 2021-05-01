@@ -3,10 +3,11 @@ const router = Router();
 
 const User = require('../models/User')
 const Formulario = require('../models/Formulario')
+const tareaCtrl  = require('../controllers/controlador')
 
 const jwt = require('jsonwebtoken');
 
-router.get('/', (req, res) => res.send('Hola SoMoRaLance'));
+// router.get('/', (req, res) => res.send('Hola SoMoRaLance'));
 
 router.post('/signup', async (req, res) => {
     const {nombre, fecha, email, password} = req.body;
@@ -66,6 +67,8 @@ router.post('/login', async (req, res) => {
 //         },
 //     ])
 // });
+
+router.get('/tareas', tareaCtrl.getTareas);
 
  router.get('/tareas-privadas', verifyToken, (req, res) => {
      res.json([

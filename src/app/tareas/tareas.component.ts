@@ -29,10 +29,10 @@ export class TareasComponent implements OnInit {
   getTareas(){
     this.tareaService.getTareas().subscribe(
       // res => console.log(res),
-      res => {
-        this.tareaService.tareas = res
+     (res) => {
+        this.tareaService.tareas = res;
       },
-      err => console.error(err)
+      (err) => console.error(err)
     )
   }
 

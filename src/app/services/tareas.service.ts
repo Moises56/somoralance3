@@ -8,8 +8,8 @@ import { Tareas } from '../models/publicaciones'
 })
 export class TareasService {
 
-  private URL = '/api'
-  // private URL = 'http://localhost:3000/api'
+  //private URL = '/api'
+  private URL = 'http://localhost:4200/api'
 
   tareas : Tareas[];
  
@@ -20,7 +20,7 @@ export class TareasService {
   // }
 
   getTareas(){
-    return this.http.get<Tareas[]>(this.URL);
+    return this.http.get<Tareas[]>(this.URL + '/tareas');
   }
 
   getTareasPrivadas(){

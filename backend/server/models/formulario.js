@@ -2,7 +2,7 @@ const {Schema, model} = require('mongoose')
 
 const formSchema = new Schema({
     nombre: String,
-    descripcion: String,
+    descripcion: String
     
 
 },{

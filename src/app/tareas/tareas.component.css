@@ -1,0 +1,22 @@
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 15px;
+    border-radius: 4px;
+    
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 20px;
+    color: white;
+  }
+
+  #boton{
+    float:right;    
+  }
+
+  .descripcion{
+      font-size: 10px;
+      float:left;
+  }
+
+  

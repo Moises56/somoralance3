@@ -11,7 +11,7 @@ export class FormularioComponent implements OnInit {
 
   formulario = {
     nombre: '',
-    descripcion: '',  
+    descripcion: ''
   }
 
   constructor(

@@ -2,12 +2,23 @@
     <div class="container h-100">
         <div class="row h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-10 align-self-end">
-                 <h1>Tareas Publicas</h1>
+                 <h1>Proyectos</h1>
               </div>
               <div class="col-lg-8 align-self-baseline pt-5">
                 <ul class="list-group">
                     <li class="list-group-item" *ngFor="let tarea of tareas">
+                        <button type="button" id="boton" class="btn btn-outline-info">Ver</button>
                         {{tarea._id}} - {{tarea.name}}: {{tarea.description}}
+                    </li>
+                    <li class="controls" >
+                        
+                        <button type="button" id="boton" class="btn btn-outline-info ">Ver</button>
+                        <div class="nombre"> Pagina Web <i class="far fa-file-code"></i></div>
+                        <div class="descripcion">dsafsf</div>
+                    </li>
+                    <li class="controls" >
+                        <button type="button" id="boton" class="btn btn-outline-info">Ver</button>
+                        aaaaa 
                     </li>
                 </ul>
             </div>     

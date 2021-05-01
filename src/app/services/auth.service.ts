@@ -19,6 +19,10 @@ export class AuthService {
     return this.http.post<any>(this.URL + '/signup', user);
   }
 
+  formulario(formulario: any){
+    return this.http.post<any>(this.URL + '/formulario', formulario);
+  }
+
    login(user: any){
     return this.http.post<any>(this.URL + '/login', user);
   }

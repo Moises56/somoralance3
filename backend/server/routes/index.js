@@ -2,6 +2,7 @@ const {Router} = require('express');
 const router = Router();
 
 const User = require('../models/User')
+const Formulario = require('../models/formulario')
 
 const jwt = require('jsonwebtoken');
 
@@ -15,6 +16,18 @@ router.post('/signup', async (req, res) => {
     await newUser.save();
     const token = await jwt.sign({_id: newUser._id}, 'secretkey');
     res.status(200).json({token});
+    // console.log(req.body);
+    // res.send('Testing Signup');
+})
+
+router.post('/formulario', async (req, res) => {
+    const {nombre, descripcion} = req.body;
+    // console.log(email, password);
+    const newFormulario = new Formulario({nombre, descripcion});
+    // console.log(newUser);
+    await newFormulario.save();
+    // const token = await jwt.sign({_id: newUser._id}, 'secretkey');
+    // res.status(200).json({token});
     // console.log(req.body);
     // res.send('Testing Signup');
 })
